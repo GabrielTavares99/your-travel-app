@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">your-travel-app</string>
+    <string name="app_name">Sua Viagem</string>
+
+    <string name="tipo_pacote_especial">Especiais</string>
+    <string name="nome_categoria">Pacotes</string>
+    <string name="pais_brasil">Brasil</string>
+
 </resources>
