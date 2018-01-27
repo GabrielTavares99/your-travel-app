@@ -6,14 +6,40 @@
     android:layout_height="match_parent"
     tools:context="com.ueuo.gabrieltavares.main.ListaPacotesActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="120"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@color/corFundoCabecalho" />
+
     <TextView
+        android:id="@+id/lbl_tipo_pacote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
         android:text="@string/tipo_pacote_especial"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_pais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/pais_brasil"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lbl_tipo_pacote"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_tipo_pacote" />
 
 </android.support.constraint.ConstraintLayout>
