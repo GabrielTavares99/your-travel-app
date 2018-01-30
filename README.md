@@ -12,4 +12,13 @@ foi adicionado por último.
 
 **API TOOLS:**
 com ela é possível simular as _views_ por meio do preenchimento de dados fictícios oriundos de um 
-arquivo JSON no diretório**sampledata**.
+arquivo JSON no diretório **sampledata**.
+
+**Pegando recurso pelo nome do arquivo**
+<br>
+`        
+Resources resources = context.getResources();
+         int idDrawable = resources.getIdentifier([nome do recurso], [nome da pasta(drawable)], context.getPackageName());
+         Drawable drawableImagemPacote = resources.getDrawable(idDrawable);
+         imageView.setImageDrawable(drawableImagemPacote);
+`
