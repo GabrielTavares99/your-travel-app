@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -53,6 +54,13 @@ public class ListaPacotesAdapter extends BaseAdapter {
 
         TextView cidade = viewCriada.findViewById(R.id.item_pacote_cidade);
         cidade.setText(pacote.getLocal());
+
+        // TODO: 30/01/18 CORRIGIR FORMATAÇÃO DE VALORES
+        TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
+        preco.setText(String.valueOf(pacote.getPreco()));
+
+        TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
+        dias.setText(String.valueOf(pacote.getDias())+" dias");
 
         // TODO: 29/01/18 TERMINAR PROCESSO DE BIND 
         return viewCriada;
