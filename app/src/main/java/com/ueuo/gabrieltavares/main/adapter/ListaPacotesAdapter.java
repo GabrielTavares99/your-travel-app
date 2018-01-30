@@ -1,13 +1,13 @@
 package com.ueuo.gabrieltavares.main.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ueuo.gabrieltavares.main.model.Pacote;
@@ -55,6 +55,12 @@ public class ListaPacotesAdapter extends BaseAdapter {
         TextView cidade = viewCriada.findViewById(R.id.item_pacote_cidade);
         cidade.setText(pacote.getLocal());
 
+        ImageView imageView = viewCriada.findViewById(R.id.item_pacote_imagem);
+        Resources resources = context.getResources();
+        int idDrawable = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
+        Drawable drawableImagemPacote = resources.getDrawable(idDrawable);
+        imageView.setImageDrawable(drawableImagemPacote);
+
         // TODO: 30/01/18 CORRIGIR FORMATAÇÃO DE VALORES
         TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
         preco.setText(String.valueOf(pacote.getPreco()));
@@ -62,7 +68,6 @@ public class ListaPacotesAdapter extends BaseAdapter {
         TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
         dias.setText(String.valueOf(pacote.getDias())+" dias");
 
-        // TODO: 29/01/18 TERMINAR PROCESSO DE BIND 
         return viewCriada;
     }
 }
