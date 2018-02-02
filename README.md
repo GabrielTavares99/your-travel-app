@@ -29,4 +29,4 @@ arquivo JSON no diretório **sampledata**.
 O **pacote util** é bem interessante por conter alguns algoritmos simples de como **pegar algum**
 **resource** ou realizar **formatações de moeda**.
 
-![Imagem do aplicativo](images/tela-inteira.png)
+![Imagem do aplicativo](app/images/tela-inteira.png)
