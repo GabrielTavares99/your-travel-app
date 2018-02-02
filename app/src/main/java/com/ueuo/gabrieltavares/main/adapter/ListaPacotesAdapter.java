@@ -72,8 +72,6 @@ public class ListaPacotesAdapter extends BaseAdapter {
         TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
         dias.setText(DiasUtil.getQuantidadeDiasEmTexto(pacote.getDias()));
 
-        // TODO: 02/02/18 Alterar readme para adicionar observações sobre a formatação dos dados
-
         return viewCriada;
     }
 

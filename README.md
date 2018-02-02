@@ -1,4 +1,4 @@
-# your-travel-app
+# Sua Viagem App
 
 O objetivo desse repositório é estudar/praticar a nova API de layout do Android, o **ConstraintLayout**.
 
@@ -18,8 +18,15 @@ arquivo JSON no diretório **sampledata**.
 <br>
 `Resources resources = context.getResources();`
 <br>
-`int idDrawable = resources.getIdentifier([nome do recurso], [nome da pasta(drawable)], context.getPackageName());`
+`int idDrawable = resources.getIdentifier([nome recurso], [nome pasta(drawable)], context.getPackageName());`
 <br>
 `Drawable drawableImagemPacote = resources.getDrawable(idDrawable);`
 <br>
 `imageView.setImageDrawable(drawableImagemPacote);`
+
+**Conversões**
+<br>
+O **pacote util** é bem interessante por conter alguns algoritmos simples de como **pegar algum**
+**resource** ou realizar **formatações de moeda**.
+
+![Imagem do aplicativo](images/tela-inteira.png)
