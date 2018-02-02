@@ -7,16 +7,17 @@
     tools:context="com.ueuo.gabrieltavares.main.ListaPacotesActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/cabecalho_pacotes"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/corFundoCabecalho" />
+        app:srcCompat="@color/colorPrimary"
+        android:contentDescription="@string/informacoes_aba_pacotes" />
 
     <TextView
         android:id="@+id/lbl_tipo_pacote"
@@ -27,8 +28,8 @@
         android:text="@string/tipo_pacote_especial"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/cabecalho_pacotes"
+        app:layout_constraintTop_toTopOf="@id/cabecalho_pacotes" />
 
     <TextView
         android:id="@+id/lbl_pais"
@@ -47,12 +48,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         tools:listitem="@layout/item_pacote"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        app:layout_constraintTop_toBottomOf="@id/cabecalho_pacotes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
-
 
 </android.support.constraint.ConstraintLayout>

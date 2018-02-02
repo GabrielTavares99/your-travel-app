@@ -4,7 +4,8 @@
     <string name="tipo_pacote_especial">Especiais</string>
     <string name="nome_categoria">Pacotes</string>
     <string name="pais_brasil">Brasil</string>
-
+    <string name="informacoes_aba_pacotes">TODO</string>
+    <string name="imagem_descricao">Paisagem</string>
 
 
 </resources>

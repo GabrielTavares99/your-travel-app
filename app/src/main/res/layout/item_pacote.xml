@@ -1,19 +1,19 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
         android:id="@+id/item_pacote_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
@@ -24,12 +24,12 @@
                 android:id="@+id/item_pacote_imagem"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
-                android:contentDescription="Paisagem"
+                android:contentDescription="@string/imagem_descricao"
                 android:scaleType="centerCrop"
-                tools:src="@sample/pacotes.json/pacotes/imagem"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@sample/pacotes.json/pacotes/imagem" />
 
             <TextView
                 android:id="@+id/item_pacote_cidade"
@@ -38,7 +38,6 @@
                 android:layout_margin="8dp"
                 android:background="@android:drawable/screen_background_dark_transparent"
                 android:padding="8dp"
-                tools:text="@sample/pacotes.json/pacotes/local"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -47,20 +46,21 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/item_pacote_imagem"
                 app:layout_constraintTop_toTopOf="@id/item_pacote_imagem"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="@sample/pacotes.json/pacotes/local" />
 
             <TextView
                 android:id="@+id/item_pacote_dias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                tools:text="@sample/pacotes.json/pacotes/dias"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor" />
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_divisor"
+                tools:text="@sample/pacotes.json/pacotes/dias" />
 
             <View
                 android:id="@+id/item_pacote_divisor"
@@ -69,20 +69,20 @@
                 android:background="@android:color/holo_orange_dark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/item_pacote_imagem"/>
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_imagem" />
 
             <TextView
                 android:id="@+id/item_pacote_preco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@sample/pacotes.json/pacotes/preco"
+                android:layout_marginBottom="8dp"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/item_pacote_dias"
-                app:layout_constraintTop_toBottomOf="@id/item_pacote_dias" />
+                app:layout_constraintTop_toBottomOf="@id/item_pacote_dias"
+                tools:text="@sample/pacotes.json/pacotes/preco" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
