@@ -21,7 +21,7 @@ import java.util.Locale;
 public class ListaPacotesAdapter extends BaseAdapter {
 
     private List<Pacote> pacotes;
-    private Context context;
+    private final Context context;
 
     public ListaPacotesAdapter(List<Pacote> pacotes, Context context){
         this.pacotes = pacotes;
@@ -43,15 +43,17 @@ public class ListaPacotesAdapter extends BaseAdapter {
         return 0;
     }
 
+    private View getViewReciclada(View view, ViewGroup parent){
+        if (view == null) {
+            return LayoutInflater.from(context).inflate(R.layout.item_pacote, parent, false);
+        }
+        return view;
+    }
+
     @Override
     public View getView(int i, View view, ViewGroup parent) {
-        View viewCriada;
 
-        if (view == null) {
-            viewCriada = LayoutInflater.from(context).inflate(R.layout.item_pacote, parent, false);
-        }else {
-            viewCriada = view;
-        }
+        View viewCriada = getViewReciclada(view, parent);
 
         Pacote pacote = pacotes.get(i);
 
@@ -59,19 +61,28 @@ public class ListaPacotesAdapter extends BaseAdapter {
         cidade.setText(pacote.getLocal());
 
         ImageView imageView = viewCriada.findViewById(R.id.item_pacote_imagem);
-        Resources resources = context.getResources();
-        int idDrawable = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
-        Drawable drawableImagemPacote = resources.getDrawable(idDrawable);
-        imageView.setImageDrawable(drawableImagemPacote);
+        imageView.setImageDrawable(getDrawableImage(pacote));
 
-        NumberFormat formatoBrasileiroMoeda = DecimalFormat.getCurrencyInstance(new Locale("pt", "br"));
         TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
-        preco.setText(String.valueOf(formatoBrasileiroMoeda.format(pacote.getPreco()).replace("R$", "R$ ")));
+        preco.setText(String.valueOf(getPrecoFormatado(pacote)));
 
         TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
         dias.setText(getQuantidadeDiasEmTexto(pacote.getDias()));
 
+        // TODO: 02/02/18 Alterar readme para adicionar observações sobre a formatação dos dados
+
         return viewCriada;
+    }
+
+    private String getPrecoFormatado(Pacote pacote){
+        NumberFormat formatoBrasileiroMoeda = DecimalFormat.getCurrencyInstance(new Locale("pt", "br"));
+        return formatoBrasileiroMoeda.format(pacote.getPreco()).replace("R$", "R$ ");
+    }
+
+    private Drawable getDrawableImage(Pacote pacote){
+        Resources resources = context.getResources();
+        int idDrawable = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
+        return resources.getDrawable(idDrawable);
     }
 
     private String getQuantidadeDiasEmTexto(int quantidadeDias){
