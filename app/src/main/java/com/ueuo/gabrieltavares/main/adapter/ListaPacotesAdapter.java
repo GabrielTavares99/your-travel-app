@@ -13,7 +13,10 @@ import android.widget.TextView;
 import com.ueuo.gabrieltavares.main.model.Pacote;
 import com.ueuo.gabrieltavares.your_travel_app.R;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class ListaPacotesAdapter extends BaseAdapter {
 
@@ -61,13 +64,21 @@ public class ListaPacotesAdapter extends BaseAdapter {
         Drawable drawableImagemPacote = resources.getDrawable(idDrawable);
         imageView.setImageDrawable(drawableImagemPacote);
 
-        // TODO: 30/01/18 CORRIGIR FORMATAÇÃO DE VALORES
+        NumberFormat formatoBrasileiroMoeda = DecimalFormat.getCurrencyInstance(new Locale("pt", "br"));
         TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
-        preco.setText(String.valueOf(pacote.getPreco()));
+        preco.setText(String.valueOf(formatoBrasileiroMoeda.format(pacote.getPreco()).replace("R$", "R$ ")));
 
         TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
-        dias.setText(String.valueOf(pacote.getDias())+" dias");
+        dias.setText(getQuantidadeDiasEmTexto(pacote.getDias()));
 
         return viewCriada;
+    }
+
+    private String getQuantidadeDiasEmTexto(int quantidadeDias){
+        if (quantidadeDias > 1){
+            return quantidadeDias + " dias";
+        }else {
+            return quantidadeDias + " dia";
+        }
     }
 }
