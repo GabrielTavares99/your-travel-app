@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ueuo.gabrieltavares.main.model.Pacote;
+import com.ueuo.gabrieltavares.main.util.DiasUtil;
+import com.ueuo.gabrieltavares.main.util.MoedaUtil;
+import com.ueuo.gabrieltavares.main.util.ResourceUtil;
 import com.ueuo.gabrieltavares.your_travel_app.R;
 
 import java.text.DecimalFormat;
@@ -61,35 +64,18 @@ public class ListaPacotesAdapter extends BaseAdapter {
         cidade.setText(pacote.getLocal());
 
         ImageView imageView = viewCriada.findViewById(R.id.item_pacote_imagem);
-        imageView.setImageDrawable(getDrawableImage(pacote));
+        imageView.setImageDrawable(ResourceUtil.getDrawableImage(context, pacote.getImagem()));
 
         TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
-        preco.setText(String.valueOf(getPrecoFormatado(pacote)));
+        preco.setText(String.valueOf(MoedaUtil.getPrecoFormatadoEmReal(pacote.getPreco())));
 
         TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
-        dias.setText(getQuantidadeDiasEmTexto(pacote.getDias()));
+        dias.setText(DiasUtil.getQuantidadeDiasEmTexto(pacote.getDias()));
 
         // TODO: 02/02/18 Alterar readme para adicionar observações sobre a formatação dos dados
 
         return viewCriada;
     }
 
-    private String getPrecoFormatado(Pacote pacote){
-        NumberFormat formatoBrasileiroMoeda = DecimalFormat.getCurrencyInstance(new Locale("pt", "br"));
-        return formatoBrasileiroMoeda.format(pacote.getPreco()).replace("R$", "R$ ");
-    }
 
-    private Drawable getDrawableImage(Pacote pacote){
-        Resources resources = context.getResources();
-        int idDrawable = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
-        return resources.getDrawable(idDrawable);
-    }
-
-    private String getQuantidadeDiasEmTexto(int quantidadeDias){
-        if (quantidadeDias > 1){
-            return quantidadeDias + " dias";
-        }else {
-            return quantidadeDias + " dia";
-        }
-    }
 }
