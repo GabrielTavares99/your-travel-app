@@ -4,37 +4,46 @@
       "local": "São Paulo",
       "imagem": "@drawable/sao_paulo_sp",
       "dias": "2 dias",
-      "preco": "R$ 243,99"
+      "preco": "R$ 243,99",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
     },
     {
       "local": "Belo Horizonte",
       "imagem": "@drawable/belo_horizonte_mg",
       "dias": "3 dias",
-      "preco": "R$ 421,50"
+      "preco": "R$ 421,50",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
     },
     {
       "local": "Recife",
       "imagem": "@drawable/recife_pe",
       "dias": "4 dias",
-      "preco": "R$ 754,20"
+      "preco": "R$ 754,20",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
+
     },
     {
       "local": "Rio de Janeiro",
       "imagem": "@drawable/rio_de_janeiro_rj",
       "dias": "6 dias",
-      "preco": "R$ 532,55"
+      "preco": "R$ 532,55",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
+
     },
     {
       "local": "Salvador",
       "imagem": "@drawable/salvador_ba",
       "dias": "5 dias",
-      "preco": "R$ 899,99"
+      "preco": "R$ 899,99",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
+
     },
     {
       "local": "Foz do Iguaçu",
       "imagem": "@drawable/foz_do_iguacu_pr",
       "dias": "1 dia",
-      "preco": "R$ 289,90"
+      "preco": "R$ 289,90",
+      "descricao": "Lorem ipsum ante phasellus libero ac ad luctus habitant massa adipiscing vulputate felis pulvinar, amet felis per euismod platea blandit nunc gravida lobortis sagittis turpis senectus pulvinar congue, ut proin curabitur est eleifend fermentum ut primis eu lacus ut per. erat varius tincidunt ac tempus fames curae nam sapien, pharetra praesent condimentum fames euismod praesent ultricies luctus amet, leo ultrices convallis tortor sem est mi. placerat congue phasellus magna fringilla porta in turpis elit, augue diam mi justo suscipit sem hac non magna, nam cursus posuere nunc taciti risus ultrices. "
     }
   ]
 }
